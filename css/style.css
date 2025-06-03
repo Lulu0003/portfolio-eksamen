@@ -1,4 +1,45 @@
-h1 {
-  color: rgb(184, 43, 43);
-  font-size: 24px;
+/*************** Reset *******************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/************* variabler ****************/
+html {
+  --pink: #fcaecb;
+  --grå: #453b3c;
+  --lysgul: #fef7d6;
+  --neongul: #f2e93b;
+  --hvid: #ffffff;
+}
+/************ header settings mobil **********/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  background-color: var(--lysgul);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/* .logo {
+} */
+.menu a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--grå);
+  font-weight: 500;
+}
+.menu a.active {
+  color: var(--neongul);
+}
+/************ header settings desktop **********/
+
+/************* projekter side ************/
