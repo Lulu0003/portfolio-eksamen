@@ -36,10 +36,10 @@ html {
   top: 0;
   z-index: 1000;
 }
-/* .logo {
-  width: 115px;
-  height: 130px;
-} */
+.logo {
+  color: var(--neongul);
+  font-weight: 500;
+}
 .menu a {
   margin-left: 1rem;
   text-decoration: none;
@@ -48,6 +48,27 @@ html {
 }
 .menu a.active {
   color: var(--grå);
+}
+.menu-t a {
+  color: var(--grå);
+  padding: 1rem;
+}
+.menu-t a:hover {
+  color: var(--neongul);
+}
+/************ footer *************/
+.t-navbar {
+  display: flex;
+  justify-content: end;
+  padding: 2.5rem;
+}
+.t-menu a {
+  color: var(--pink);
+  font-size: 1.4rem;
+  text-decoration: underline var(--neongul);
+}
+.t-menu a:hover {
+  color: var(--neongul);
 }
 
 /************ header settings desktop **********/
@@ -76,7 +97,31 @@ ul {
   font-family: var(--tekst-font);
   font-size: 0.95rem;
 }
+.større-billede:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+.større-billede1:hover {
+  transform: scale(1.9);
+  cursor: pointer;
+}
+/*** hygge ting ***/
+ul {
+  list-style: none; /* sluk for de klassiske punkter */
+  padding-left: 0; /* fjern venstre indryk, hvis du vil */
+}
 
+ul li {
+  padding-left: 1.2em; /* giv plads til hjertet */
+  position: relative; /* så ::before kan placeres */
+}
+
+ul li::before {
+  content: "♥"; /* Unicode‐hjerte */
+  position: absolute;
+  left: 0; /* helt ude i venstre side */
+  top: 0;
+}
 /************* forside ***************/
 .body-forside {
   background-color: var(--grå);
@@ -100,7 +145,9 @@ ul {
   color: var(--lysgul);
 }
 .knapper-højre {
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 .pink-knap:hover {
   transform: scale(1.05);
@@ -116,7 +163,7 @@ ul {
 .pink-knap {
   display: block;
   text-decoration: none;
-  padding: 3.8rem 4rem;
+  padding: 3.2rem 3.5rem;
   font-family: var(--link-font);
   font-size: 1.4rem;
   font-weight: 550;
@@ -129,10 +176,11 @@ ul {
 .gul-knap {
   display: block;
   text-decoration: none;
-  padding: 3.8rem 4rem;
+  padding: 3.2rem 3.5rem;
   font-size: 1.4rem;
   font-family: var(--link-font);
   font-weight: 550;
+  border-radius: 2px;
   transition: transform 0.2s;
   background-color: var(--lysgul);
   color: var(--grå);
@@ -206,12 +254,13 @@ ul {
 .om-container p:last-child {
   margin-bottom: 1rem;
 }
-.om-højre2 {
+.om-venstre2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.8rem;
+  padding: 2rem;
 }
-.om-højre2 img {
+.om-venstre2 img {
   width: 200px;
   height: 260px;
   border: 3px dotted var(--grå);
@@ -233,12 +282,14 @@ ul {
   }
   .om-højre3 {
     padding: 0;
+    margin: 4.2rem;
+    max-width: 450%;
   }
-  .om-højre2 {
+  .om-venstre2 img {
     flex-direction: row;
     justify-content: space-between;
-    max-width: 430px;
-    margin: 0 auto;
+    width: 240px;
+    height: 310px;
   }
   .om-container p {
     line-height: 1.8;
@@ -263,6 +314,7 @@ ul {
 .projekter-højre img {
   width: 160px;
   height: 160px;
+  border: dotted var(--grå);
 }
 .projekter-venstre {
   margin-bottom: 2rem;
@@ -368,6 +420,13 @@ h5 {
   padding: 0rem 2rem 1.5rem 2rem;
   color: var(--grå);
 }
+.body-t1 h2,
+h3,
+h4 {
+  text-decoration: var(--pink) underline;
+  padding: 1rem 2rem 1.5rem 2rem;
+}
+
 .body-t h2,
 h3,
 h4,
