@@ -17,6 +17,14 @@ html {
   --lysgul: #fef7d6;
   --neongul: #f2e93b;
   --hvid: #ffffff;
+  --h1-font: "Playfair Display", serif;
+  --link-font: "Lora", serif;
+  --tekst-font: "Taviraj", serif;
+}
+.taviraj-extralight {
+  font-family: "Taviraj", serif;
+  font-weight: 200;
+  font-style: normal;
 }
 /************ header settings mobil **********/
 .navbar {
@@ -24,22 +32,409 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 1.5rem;
-  background-color: var(--lysgul);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 /* .logo {
+  width: 115px;
+  height: 130px;
 } */
 .menu a {
   margin-left: 1rem;
   text-decoration: none;
-  color: var(--grå);
+  color: var(--neongul);
   font-weight: 500;
 }
 .menu a.active {
-  color: var(--neongul);
+  color: var(--grå);
 }
+
 /************ header settings desktop **********/
 
+/*************** fælles ting ***************/
+h1 {
+  font-family: var(--h1-font);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--link-font);
+  font-weight: 450;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+p {
+  font-family: var(--tekst-font);
+  padding: 0rem 2rem 0rem 2rem;
+}
+ul {
+  font-family: var(--tekst-font);
+  font-size: 0.95rem;
+}
+
+/************* forside ***************/
+.body-forside {
+  background-color: var(--grå);
+}
+.body-forside header {
+  background-color: var(--grå);
+}
+.body-forside menu a {
+  color: var(--neongul);
+}
+.forside-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+.h1-gul,
+.h2-gul {
+  color: var(--lysgul);
+}
+.knapper-højre {
+  gap: 1rem;
+}
+.pink-knap:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  color: var(--neongul);
+}
+.gul-knap:hover {
+  transform: scale(1.05);
+  color: var(--neongul);
+  cursor: pointer;
+}
+
+.pink-knap {
+  display: block;
+  text-decoration: none;
+  padding: 3.8rem 4rem;
+  font-family: var(--link-font);
+  font-size: 1.4rem;
+  font-weight: 550;
+  border-radius: 2px;
+  transition: transform 0.2s;
+  background-color: var(--pink);
+  color: var(--grå);
+}
+
+.gul-knap {
+  display: block;
+  text-decoration: none;
+  padding: 3.8rem 4rem;
+  font-size: 1.4rem;
+  font-family: var(--link-font);
+  font-weight: 550;
+  transition: transform 0.2s;
+  background-color: var(--lysgul);
+  color: var(--grå);
+}
+
+/*********** forside computer **********/
+@media (min-width: 800px) {
+  .forside-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .forside-venstre {
+    flex: 1;
+    align-self: center;
+  }
+  .forside-venstre h1 {
+    font-size: 3.8rem;
+    margin-top: 6rem;
+  }
+  .forside-venstre h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .knapper-højre {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 450px;
+  }
+}
+
+/************** om mig side *************/
+.body-ommig {
+  background-color: var(--pink);
+}
+.body-ommig header {
+  background-color: var(--pink);
+}
+.om-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.om-container h1 {
+  color: var(--grå);
+}
+.om-container h2 {
+  color: var(--grå);
+  font-size: 1.2rem;
+  font-weight: 650;
+}
+.om-container p {
+  background-color: var(--grå);
+  color: var(--lysgul);
+  text-align: left;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0.5rem 2.6rem 2.6rem 2.6rem;
+  padding: 2rem;
+  font-family: var(--tekst-font);
+}
+.om-container p:last-child {
+  margin-bottom: 1rem;
+}
+.om-højre2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+.om-højre2 img {
+  width: 200px;
+  height: 260px;
+  border: 3px dotted var(--grå);
+}
+
+/************* om mig computer ************/
+@media screen and (min-width: 800px) {
+  .om-container {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    padding: 2rem 4rem;
+    gap: 4rem;
+  }
+
+  .om-venstre,
+  .om-højre3 {
+    flex: 1;
+  }
+  .om-højre3 {
+    padding: 0;
+  }
+  .om-højre2 {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 430px;
+    margin: 0 auto;
+  }
+  .om-container p {
+    line-height: 1.8;
+  }
+}
+
 /************* projekter side ************/
+.body-projekter {
+  background-color: var(--lysgul);
+}
+.body-projekter main {
+  padding: 0rem 2rem 2rem 2rem;
+}
+.body-projekter header {
+  background-color: var(--lysgul);
+}
+.projekter-højre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.projekter-højre img {
+  width: 160px;
+  height: 160px;
+}
+.projekter-venstre {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.projekter-venstre h1 {
+  font-size: 2rem;
+  color: var(--grå);
+}
+.projekter-venstre h2 {
+  font-size: 1.2rem;
+  color: var(--grå);
+}
+.projekter-højre img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  border: solid var(--grå);
+}
+.projekter-højre,
+a {
+  color: var(--grå);
+  font-family: var(--link-font);
+  font-weight: 650;
+  text-decoration: none;
+}
+/************* projekter desktop ************/
+
+@media (min-width: 800px) {
+  .projekter-container {
+    display: flex;
+    height: 100vh;
+    /*halvdelen af skærmen er tekst og den anden projekter, sikrer height: 100vh; at hele siden bliver visuelt opdelt i to lige store lodrette dele – og fylder hele højden på både desktop og laptop.*/
+  }
+  .projekter-venstre {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: var(--hvid);
+    padding: 4rem;
+  }
+
+  .projekter-højre {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-content: center;
+    background-color: var(--lysgul);
+    padding: 4rem;
+  }
+  .projekter-højre img {
+    width: 180px;
+    height: 180px;
+  }
+}
+/********** Tema 1 **********/
+.body-t1 {
+  background-color: var(--lysgul);
+}
+.body-t1 main {
+  padding: 2rem;
+}
+.body-t1 h1 {
+  color: var(--grå);
+}
+.body-t1 p {
+  color: var(--grå);
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+@media (min-width: 800px) {
+  .t1-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .beskrivelse {
+    max-width: 650px;
+  }
+  .beskrivelse p {
+    line-height: 2;
+    font-weight: 400;
+  }
+  .website img {
+    max-width: 350px;
+    padding: 1rem;
+  }
+}
+
+/*********** Tema 2,3,4,5,6 *************/
+.body-t {
+  background-color: var(--lysgul);
+}
+.body-t main {
+  padding: 2rem;
+}
+.body-t h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0rem 2rem 1.5rem 2rem;
+  color: var(--grå);
+}
+.body-t h2,
+h3,
+h4,
+h5 {
+  text-decoration: var(--pink) underline;
+}
+.body-t p {
+  color: var(--grå);
+  padding-bottom: 1.5rem;
+}
+.body-t ul {
+  color: var(--grå);
+  padding: 0rem 2rem 1.6rem 2rem;
+  line-height: 1.8;
+}
+.bilag {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+  gap: 1rem;
+}
+.bilag img {
+  width: 140px;
+  height: 140px;
+  gap: 1rem;
+}
+.website a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem;
+  margin: 2rem;
+  font-family: var(--link-font);
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 550;
+  border-radius: 6px;
+  gap: 3rem;
+  transition: transform 0.2s;
+  background-color: var(--pink);
+  color: var(--grå);
+  cursor: pointer;
+}
+.website a:hover {
+  color: var(--neongul);
+}
+.website img {
+  padding: 1rem;
+  margin: 0 auto;
+  width: 350px;
+  height: 210px;
+}
+
+/*********** Tema 2,3,4,5,6 computer *************/
+@media (min-width: 800px) {
+  .t-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .bilag {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0rem 2rem;
+  }
+  .bilag img {
+    border: var(--grå) dotted;
+    width: 15x0px;
+    height: 150px;
+    gap: 0.5rem;
+  }
+}
